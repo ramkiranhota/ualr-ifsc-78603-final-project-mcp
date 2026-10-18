@@ -30,7 +30,7 @@ tmp/
 *.log
 
 # Build/package artifacts
-node_modules/
+node_modules
 build/
 dist/
 *.egg-info/
