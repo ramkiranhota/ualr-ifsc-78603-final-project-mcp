@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section-head">
+  <div>
+    <p class="eyebrow">Configuration</p>
+    <h2>Documentation</h2>
+    <p class="helper-copy workflow-intro">
+      Learning and demo material for explaining MCP in general and how the Trading Journal application uses MCP.
+    </p>
+  </div>
+</section>
+
+<section class="documentation-hero card accent">
+  <div>
+    <p class="eyebrow">Presentation Deck</p>
+    <h2>MCP Concepts + Trading Journal Use Case</h2>
+    <p>
+      This slide deck gives a visual explanation of Model Context Protocol, then connects those concepts to this
+      application's web UI, console client, MCP servers, market data, news, portfolio, audit, and future broker workflows.
+    </p>
+    <div class="action-row">
+      <a class="primary-link" href="{{ mcp_presentation_url }}">Open / Download Slides</a>
+      <a class="secondary-link" href="/workflow">View Workflow Map</a>
+    </div>
+  </div>
+  <div class="documentation-deck-preview" aria-label="MCP presentation summary">
+    <div class="deck-card deck-card-front">
+      <span>MCP</span>
+      <strong>Client -> Server</strong>
+      <small>Tools, resources, prompts</small>
+    </div>
+    <div class="deck-card deck-card-middle">
+      <span>Trading Journal</span>
+      <strong>Web UI + CLI</strong>
+      <small>Both consume MCP capabilities</small>
+    </div>
+    <div class="deck-card deck-card-back">
+      <span>Use Case</span>
+      <strong>Portfolio + Market Data + News</strong>
+      <small>Auditable workflows</small>
+    </div>
+  </div>
+</section>
+
+<section class="documentation-section">
+  <h2>MCP Use Case White Paper</h2>
+  <p>ACM-style project manuscript covering architecture, request flows, evaluation, limitations, ethics, and references.</p>
+  <a class="secondary-link" href="/documentation/mcp-white-paper">Download White Paper (Markdown)</a>
+</section>
+
+<section class="documentation-grid">
+  <article class="card documentation-card">
+    <span>01</span>
+    <h3>MCP Fundamentals</h3>
+    <p>Explains MCP hosts, clients, servers, discovery, tool calls, resources, prompts, and why the protocol matters.</p>
+  </article>
+  <article class="card documentation-card">
+    <span>02</span>
+    <h3>Application Mapping</h3>
+    <p>Shows how the Trading Journal web app and CLI client talk to MCP capabilities through the application host.</p>
+  </article>
+  <article class="card documentation-card">
+    <span>03</span>
+    <h3>Workflow Diagrams</h3>
+    <p>Includes visual flows for portfolio, market data, news, audit logging, and future broker integration.</p>
+  </article>
+  <article class="card documentation-card">
+    <span>04</span>
+    <h3>Reference Material</h3>
+    <p>Speaker notes include MCP documentation references and local project references used to build the explanation.</p>
+  </article>
+</section>
+
+<section class="card documentation-section">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">How To Use This Page</p>
+      <h2>Demo Flow</h2>
+    </div>
+  </div>
+  <div class="workflow-flow-list">
+    <div class="workflow-flow-row">
+      <strong>Start with slides</strong>
+      <span>Use the presentation to explain MCP in plain language before showing the application.</span>
+    </div>
+    <div class="workflow-flow-row">
+      <strong>Open Workflow Map</strong>
+      <span>Use the app's visual workflow page to connect the slides to the working prototype screens.</span>
+    </div>
+    <div class="workflow-flow-row">
+      <strong>Show MCP Console</strong>
+      <span>Demonstrate discovery and tool calls from inside the browser as a lightweight MCP client.</span>
+    </div>
+    <div class="workflow-flow-row">
+      <strong>Review Audit Logs</strong>
+      <span>Show that client actions, MCP requests, and provider calls are captured for traceability.</span>
+    </div>
+  </div>
+</section>
+{% endblock %}

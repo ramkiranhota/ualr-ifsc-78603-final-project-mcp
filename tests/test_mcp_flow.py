@@ -8,6 +8,45 @@ from fastapi.testclient import TestClient
 from mcp import ClientSession
 from mcp.client.streamable_http import streamable_http_client
 
+
+def test_workflow_map_page_explains_ui_and_console_mcp_flows(app_instance):
+    with TestClient(app_instance, base_url="http://127.0.0.1:8000") as client:
+        dashboard_response = client.get("/")
+        assert dashboard_response.status_code == 200
+        assert 'href="/workflow"' in dashboard_response.text
+        assert "Workflow Map" in dashboard_response.text
+
+        response = client.get("/workflow")
+
+    assert response.status_code == 200
+    assert "Application Workflow Map" in response.text
+    assert "MCP Application Flow At A Glance" in response.text
+    assert "workflow-graphic" in response.text
+    assert "Trading Journal MCP Host" in response.text
+    assert "Web UI Acting As An MCP Client" in response.text
+    assert "Command Line Client Acting As An MCP Client" in response.text
+    assert "Portfolio MCP" in response.text
+    assert "Market Data MCP" in response.text
+    assert "News MCP" in response.text
+    assert "Audit Layer" in response.text
+    assert "Manual trade: direct service path" in response.text
+    assert "in-process ASGI transport" in response.text
+    assert "architecture, not live health" in response.text
+
+
+def test_white_paper_download_is_linked_and_available(app_instance):
+    with TestClient(app_instance) as client:
+        page = client.get("/documentation")
+        assert 'href="/documentation/mcp-white-paper"' in page.text
+        response = client.get("/documentation/mcp-white-paper")
+    assert response.status_code == 200
+    assert response.headers["content-type"].startswith("text/markdown")
+    assert "attachment" in response.headers["content-disposition"]
+    assert "## Abstract" in response.text
+    assert "## References" in response.text
+    assert "AI assistance was used" in response.text
+
+
 def test_mcp_server_exposes_tools_resources_and_portfolio_state(app_instance):
     with TestClient(app_instance, base_url="http://127.0.0.1:8000") as client:
         accounts_response = client.get("/api/accounts")

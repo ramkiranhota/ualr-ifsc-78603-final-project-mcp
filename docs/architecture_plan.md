@@ -326,6 +326,8 @@ flowchart TD
 | 15. Deployment readiness | Planning only | Deployment plan exists; public deployment pending |
 | 16. Multi-user profiles and user-owned MCP connections | Future idea | Separate portfolio data, credentials, and MCP/provider connections per user |
 | 17. Production-grade news provider | Future idea | Replace unofficial demo news source with an official API-backed provider before production use |
+| 18. Application Workflow Visualization Screen | Complete | Configuration > Workflow Map includes architecture, expandable request traces, direct-service versus MCP paths, audit boundaries, and scaffold status |
+| 19. ACM-Style MCP Use Case White Paper | Complete (project manuscript) | Detailed manuscript in docs/mcp_use_case_white_paper.md, downloadable from Documentation; author review and venue-specific typesetting remain publication tasks |
 
 ## 10. Verification
 

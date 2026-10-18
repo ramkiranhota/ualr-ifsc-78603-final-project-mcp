@@ -1,0 +1,348 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="content-grid">
+  <article class="card">
+    <p class="eyebrow">Roadmap Item 18</p>
+    <h2>Application Workflow Map</h2>
+    <p class="helper-copy workflow-intro">
+      This screen explains how Trading Journal demonstrates the MCP concept. The browser UI and the console client
+      use MCP through Python clients: the browser calls FastAPI, which hosts the internal client; the CLI connects
+      directly to a selected MCP endpoint. Manual portfolio pages call services directly. MCP servers coordinate application services,
+      the local database, audit logs, and external providers such as Alpaca and Yahoo Finance.
+    </p>
+  </article>
+
+  <article class="card">
+    <p class="eyebrow">Registered MCP Servers</p>
+    <h3>{{ servers|length }} Servers</h3>
+    <ul class="plain-list">
+      {% for server in servers %}
+      <li><code>{{ server.id }}</code> {{ server.name }}<br><small>{{ server.description }}</small></li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>
+
+<section class="workflow-section" aria-labelledby="request-traces">
+  <h2 id="request-traces">Request Traces</h2>
+  <details open>
+    <summary>Manual trade: direct service path</summary>
+    <ol>
+      <li>Browser submits account, instrument, quantity, price, fees, and required reason.</li>
+      <li>FastAPI validates the request; the portfolio service applies average-cost accounting.</li>
+      <li>SQLite stores the trade and position changes; validation failures return an error.</li>
+      <li>Request audit middleware records the outcome. Domain-level audit coverage is still being expanded.</li>
+    </ol>
+    <a href="/trades">Trades</a>
+  </details>
+  <details>
+    <summary>Market data and news: internal MCP client path</summary>
+    <ol>
+      <li>The page route builds the requested symbols and propagates a correlation ID.</li>
+      <li>A Python MCP client initializes a session with the selected mounted server over Streamable HTTP.</li>
+      <li>The server delegates to its service/provider; the external API supplies quotes or news.</li>
+      <li>Structured results return to the page. Missing credentials, unsupported symbols, and provider errors remain visible.</li>
+      <li>MCP operations are logged; external API audit coverage currently includes Alpaca.</li>
+    </ol>
+    <p>The internal HTTP client uses an in-process ASGI transport; it does not require a separate loopback network server.</p>
+  </details>
+  <details>
+    <summary>MCP Console and CLI: discovery and invocation</summary>
+    <ol>
+      <li>Select a registered server and initialize the session.</li>
+      <li>Discover tools, resources, and prompts advertised by that server.</li>
+      <li>Call a tool, read a resource, or render a prompt with validated arguments.</li>
+      <li>Inspect structured output or an error. The browser host records the operation with a correlation ID.</li>
+    </ol>
+    <p>Prompt rendering produces messages; it does not run an LLM or generate an investment decision.</p>
+    <a href="/mcp-console">MCP Console</a> | <a href="/audit">Audit Logs</a>
+  </details>
+  <details>
+    <summary>Broker and trading: current implementation boundaries</summary>
+    <p>Broker tools expose placeholder connectivity status. Order preview returns a preview only.
+      Account synchronization, paper submission, and live order execution are future work.</p>
+    <p>Quote availability and freshness depend on provider coverage and feed entitlement.
+      Yahoo Finance news is a demonstration integration. The Workflow Map describes architecture, not live health.</p>
+  </details>
+</section>
+
+<section class="card workflow-section">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Visual Demo Card</p>
+      <h2>MCP Application Flow At A Glance</h2>
+    </div>
+    <span class="badge">Client -> MCP -> Capability</span>
+  </div>
+
+  <div class="workflow-graphic" aria-label="Graphical workflow showing clients, MCP servers, services, and external systems">
+    <div class="workflow-graphic-column">
+      <p class="workflow-graphic-label">Clients</p>
+      <div class="workflow-graphic-node client-node">
+        <span>Browser</span>
+        <strong>Web UI</strong>
+        <small>Dashboard, forms, MCP Console</small>
+      </div>
+      <div class="workflow-graphic-node client-node">
+        <span>Terminal</span>
+        <strong>CLI Demo Client</strong>
+        <small>External MCP client example</small>
+      </div>
+    </div>
+
+    <div class="workflow-graphic-connector">
+      <span>HTTP + MCP</span>
+      <strong>-></strong>
+    </div>
+
+    <div class="workflow-graphic-column workflow-graphic-center">
+      <p class="workflow-graphic-label">MCP Server Layer</p>
+      <div class="workflow-graphic-hub">
+        <strong>Trading Journal MCP Host</strong>
+        <small>Routes discovery, tools, resources, and prompts</small>
+      </div>
+      <div class="workflow-mini-grid">
+        <span>Portfolio</span>
+        <span>Market Data</span>
+        <span>News</span>
+        <span>Broker</span>
+        <span>Trading</span>
+      </div>
+    </div>
+
+    <div class="workflow-graphic-connector">
+      <span>Tools</span>
+      <strong>-></strong>
+    </div>
+
+    <div class="workflow-graphic-column">
+      <p class="workflow-graphic-label">Capabilities</p>
+      <div class="workflow-graphic-node service-node">
+        <span>Application</span>
+        <strong>Services + Database</strong>
+        <small>Trades, positions, P&amp;L, audit logs</small>
+      </div>
+      <div class="workflow-graphic-node mcp-node">
+        <span>External</span>
+        <strong>Providers</strong>
+        <small>Alpaca market data, Yahoo news</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card workflow-section">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Big Picture</p>
+      <h2>How The App Uses MCP</h2>
+    </div>
+    <a href="/mcp-console" class="secondary-link">Open MCP Console</a>
+  </div>
+
+  <div class="workflow-lane-grid">
+    <div class="workflow-node client-node">
+      <span>Client</span>
+      <strong>Web UI</strong>
+      <p>Dashboard, trades, positions, market data, news, settings.</p>
+    </div>
+    <div class="workflow-arrow">-></div>
+    <div class="workflow-node">
+      <span>Host</span>
+      <strong>FastAPI App</strong>
+      <p>Routes user actions and creates internal MCP client calls.</p>
+    </div>
+    <div class="workflow-arrow">-></div>
+    <div class="workflow-node mcp-node">
+      <span>MCP Layer</span>
+      <strong>MCP Servers</strong>
+      <p>Portfolio, Market Data, News, Broker, and Trading capabilities.</p>
+    </div>
+    <div class="workflow-arrow">-></div>
+    <div class="workflow-node service-node">
+      <span>Work</span>
+      <strong>Services + Providers</strong>
+      <p>Portfolio logic, quote lookup, news lookup, safety gates, and audit logging.</p>
+    </div>
+  </div>
+</section>
+
+<section class="workflow-two-column">
+  <article class="card workflow-section">
+    <p class="eyebrow">Browser Client Flow</p>
+    <h2>Web UI Acting As An MCP Client</h2>
+    <ol class="workflow-steps">
+      <li>
+        <span>1</span>
+        <div>
+          <strong>User opens a page</strong>
+          <p>Example: Market Data, Stock News, MCP Console, or Dashboard.</p>
+        </div>
+      </li>
+      <li>
+        <span>2</span>
+        <div>
+          <strong>FastAPI route receives the request</strong>
+          <p>The web route prepares page data and starts an internal MCP client workflow when needed.</p>
+        </div>
+      </li>
+      <li>
+        <span>3</span>
+        <div>
+          <strong>Internal MCP client calls a server</strong>
+          <p>The app uses streamable HTTP MCP transport to call tools and read resources.</p>
+        </div>
+      </li>
+      <li>
+        <span>4</span>
+        <div>
+          <strong>MCP server delegates work</strong>
+          <p>The server calls the correct application service or provider adapter.</p>
+        </div>
+      </li>
+      <li>
+        <span>5</span>
+        <div>
+          <strong>Response returns to UI</strong>
+          <p>The page renders tables, cards, status notes, errors, and audit-friendly trace details.</p>
+        </div>
+      </li>
+    </ol>
+  </article>
+
+  <article class="card workflow-section">
+    <p class="eyebrow">Console Client Flow</p>
+    <h2>Command Line Client Acting As An MCP Client</h2>
+    <ol class="workflow-steps">
+      <li>
+        <span>1</span>
+        <div>
+          <strong>User runs demo command</strong>
+          <p>Example: <code>python3 scripts/mcp_demo_client.py discover</code>.</p>
+        </div>
+      </li>
+      <li>
+        <span>2</span>
+        <div>
+          <strong>CLI connects to MCP endpoint</strong>
+          <p>The client connects to Portfolio, Market Data, News, Broker, or Trading MCP.</p>
+        </div>
+      </li>
+      <li>
+        <span>3</span>
+        <div>
+          <strong>CLI discovers capabilities</strong>
+          <p>It lists tools, resources, and prompts exposed by the selected server.</p>
+        </div>
+      </li>
+      <li>
+        <span>4</span>
+        <div>
+          <strong>CLI calls tools or reads resources</strong>
+          <p>The same MCP capabilities used by the UI can be used by an external client.</p>
+        </div>
+      </li>
+      <li>
+        <span>5</span>
+        <div>
+          <strong>CLI prints structured results</strong>
+          <p>This demonstrates that MCP separates client experience from server capability.</p>
+        </div>
+      </li>
+    </ol>
+  </article>
+</section>
+
+<section class="card workflow-section">
+  <p class="eyebrow">Capability Map</p>
+  <h2>What Each MCP Server Does</h2>
+  <div class="workflow-card-grid">
+    <article class="workflow-capability-card">
+      <span>Portfolio MCP</span>
+      <h3>Journal + Portfolio State</h3>
+      <p>Accounts, positions, trades, opening holdings, P&amp;L summary, and portfolio resources.</p>
+      <code>/mcp/</code>
+    </article>
+    <article class="workflow-capability-card">
+      <span>Market Data MCP</span>
+      <h3>Live Quote Data</h3>
+      <p>Calls Alpaca through provider services for stock, ETF, and option snapshots. Coverage and freshness depend on feed entitlement.</p>
+      <code>/market-data-mcp/</code>
+    </article>
+    <article class="workflow-capability-card">
+      <span>News MCP</span>
+      <h3>Stock News</h3>
+      <p>Fetches Yahoo Finance demo news for portfolio symbols or a searched symbol.</p>
+      <code>/news-mcp/</code>
+    </article>
+    <article class="workflow-capability-card">
+      <span>Broker MCP</span>
+      <h3>Broker Connectivity</h3>
+      <p>Safe scaffold for future IBKR account sync. It reports status without live broker actions.</p>
+      <code>/broker-mcp/</code>
+    </article>
+    <article class="workflow-capability-card">
+      <span>Trading MCP</span>
+      <h3>Order Preview</h3>
+      <p>Safe preview-only trading workflow. Live trading remains disabled until safety gates are complete.</p>
+      <code>/trading-mcp/</code>
+    </article>
+    <article class="workflow-capability-card">
+      <span>Audit Layer</span>
+      <h3>Traceability</h3>
+      <p>Records user actions, MCP requests, external API calls, and application events with redaction.</p>
+      <code>/audit</code>
+    </article>
+  </div>
+</section>
+
+<section class="card workflow-section">
+  <p class="eyebrow">Detailed Data Flows</p>
+  <h2>Common User Workflows</h2>
+  <div class="workflow-flow-list">
+    <div class="workflow-flow-row">
+      <strong>Manual trade entry</strong>
+      <span>UI form -> FastAPI route -> Portfolio service -> Database -> Audit log -> Dashboard/Positions</span>
+    </div>
+    <div class="workflow-flow-row">
+      <strong>Live market data</strong>
+      <span>Market Data page -> Internal MCP client -> Market Data MCP -> Alpaca provider -> Alpaca API -> UI table</span>
+    </div>
+    <div class="workflow-flow-row">
+      <strong>Stock news</strong>
+      <span>Stock News page -> Internal MCP client -> News MCP -> Yahoo Finance provider -> News cards</span>
+    </div>
+    <div class="workflow-flow-row">
+      <strong>MCP console demo</strong>
+      <span>MCP Console -> Internal MCP client host -> Selected MCP server -> tools/resources/prompts -> JSON result</span>
+    </div>
+    <div class="workflow-flow-row">
+      <strong>CLI demo</strong>
+      <span>Command line client -> Streamable HTTP MCP -> Selected MCP server -> structured terminal output</span>
+    </div>
+  </div>
+</section>
+
+<section class="card workflow-section">
+  <p class="eyebrow">Why This Is An MCP Use Case</p>
+  <h2>Client And Server Separation</h2>
+  <div class="workflow-callout-grid">
+    <div>
+      <strong>Multiple clients</strong>
+      <p>The browser UI, MCP Console, command-line client, and future AI client can all use the same server capabilities.</p>
+    </div>
+    <div>
+      <strong>Domain-specific servers</strong>
+      <p>Each MCP server exposes focused tools/resources instead of mixing all features into one route.</p>
+    </div>
+    <div>
+      <strong>Auditable tool calls</strong>
+      <p>MCP calls can be logged, reviewed, and connected to user actions through correlation IDs.</p>
+    </div>
+    <div>
+      <strong>Extensible providers</strong>
+      <p>External data sources can change behind providers while MCP tools stay stable for clients.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

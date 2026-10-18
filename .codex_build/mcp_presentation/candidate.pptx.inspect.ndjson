@@ -1,0 +1,219 @@
+{"kind":"deck","id":"pr/93hmkp","name":"Deck"}
+{"kind":"layout","layoutId":"023e1170-e692-4b42-832d-9da840d37792","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"a1c11c19-a642-415c-8eb7-a86ca18232c0","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/dd0plv","slide":1,"title":"Model Context Protocol","textShapes":10}
+{"kind":"shape","id":"sh/g7a50rm9","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/v6h4rm54","slide":1,"bbox":[0,0,260,260]}
+{"kind":"shape","id":"sh/u58nyh4j","slide":1,"bbox":[1020,0,260,260]}
+{"kind":"textbox","id":"sh/5cjmxwn6","slide":1,"text":"Model Context Protocol","textPreview":"Model Context Protocol","textChars":22,"textLines":1,"bbox":[72,92,760,78]}
+{"kind":"textbox","id":"sh/4ba54rml","slide":1,"text":"General concept and Trading Journal use case","textPreview":"General concept and Trading Journal use case","textChars":44,"textLines":1,"bbox":[74,174,620,36]}
+{"kind":"shape","id":"sh/3a14vm50","slide":1,"bbox":[110,326,230,112]}
+{"kind":"textbox","id":"sh/i9sn2h4f","slide":1,"text":"CLIENT","textPreview":"CLIENT","textChars":6,"textLines":1,"bbox":[126,338,198,24]}
+{"kind":"textbox","id":"sh/dg3m1gn2","slide":1,"text":"AI app or UI","textPreview":"AI app or UI","textChars":12,"textLines":1,"bbox":[128,368,194,64]}
+{"kind":"shape","id":"sh/cfu58bmh","slide":1,"bbox":[525,304,230,156]}
+{"kind":"textbox","id":"sh/ypgbqtsr","slide":1,"text":"PROTOCOL","textPreview":"PROTOCOL","textChars":8,"textLines":1,"bbox":[541,316,198,24]}
+{"kind":"textbox","id":"sh/jqpczytc","slide":1,"text":"MCP","textPreview":"MCP","textChars":3,"textLines":1,"bbox":[543,346,194,108]}
+{"kind":"shape","id":"sh/kbyds3ax","slide":1,"bbox":[940,326,230,112]}
+{"kind":"textbox","id":"sh/lcru18bi","slide":1,"text":"SERVER","textPreview":"SERVER","textChars":6,"textLines":1,"bbox":[956,338,198,24]}
+{"kind":"textbox","id":"sh/6d0vuds3","slide":1,"text":"Tools and context","textPreview":"Tools and context","textChars":17,"textLines":1,"bbox":[958,368,194,64]}
+{"kind":"shape","id":"sh/7e9c3ito","slide":1,"bbox":[340,382,185,0]}
+{"kind":"shape","id":"sh/8fidwnat","slide":1,"bbox":[755,382,185,0]}
+{"kind":"textbox","id":"sh/tgru5sbe","slide":1,"text":"A common way for clients to discover and use external capabilities","textPreview":"A common way for clients to discover and use external capabilities","textChars":66,"textLines":1,"bbox":[285,506,720,34]}
+{"kind":"textbox","id":"sh/mhwbi9cj","slide":1,"text":"Trading Journal MCP  01","textPreview":"Trading Journal MCP  01","textChars":23,"textLines":1,"bbox":[58,672,260,22]}
+{"kind":"notes","id":"nt/dd0plv","slide":1,"text":"Sources: Model Context Protocol architecture documentation, https://modelcontextprotocol.io/docs/concepts/architecture. Trading Journal project documentation in docs/architecture_plan.md."}
+{"kind":"slide","id":"sl/kr24yj","slide":2,"title":"MCP building blocks","textShapes":17}
+{"kind":"shape","id":"sh/2hsfu1oz","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/pkjepw7a","slide":2,"bbox":[0,0,260,260]}
+{"kind":"shape","id":"sh/ojaxwr6p","slide":2,"bbox":[1020,0,260,260]}
+{"kind":"textbox","id":"sh/bm1wr6pg","slide":2,"text":"MCP building blocks","textPreview":"MCP building blocks","textChars":19,"textLines":1,"bbox":[58,42,760,58]}
+{"kind":"textbox","id":"sh/alsfy1ov","slide":2,"text":"The protocol separates user experience from available capabilities","textPreview":"The protocol separates user experience from available capabilities","textChars":66,"textLines":1,"bbox":[60,98,820,38]}
+{"kind":"shape","id":"sh/xo3ytg7m","slide":2,"bbox":[70,255,250,120]}
+{"kind":"textbox","id":"sh/cnax0b61","slide":2,"text":"HOST","textPreview":"HOST","textChars":4,"textLines":1,"bbox":[86,267,218,24]}
+{"kind":"textbox","id":"sh/rqhwf2pc","slide":2,"text":"ChatGPT, IDE, or custom app","textPreview":"ChatGPT, IDE, or custom app","textChars":27,"textLines":1,"bbox":[88,297,214,72]}
+{"kind":"shape","id":"sh/qp8fmh8r","slide":2,"bbox":[394,255,250,120]}
+{"kind":"textbox","id":"sh/0z29sf2x","slide":2,"text":"CLIENT","textPreview":"CLIENT","textChars":6,"textLines":1,"bbox":[410,267,218,24]}
+{"kind":"textbox","id":"sh/10ba103i","slide":2,"text":"One connection per server","textPreview":"One connection per server","textChars":25,"textLines":1,"bbox":[412,297,214,72]}
+{"kind":"shape","id":"sh/exkrq5k7","slide":2,"bbox":[718,255,250,120]}
+{"kind":"textbox","id":"sh/fytszals","slide":2,"text":"SERVER","textPreview":"SERVER","textChars":6,"textLines":1,"bbox":[734,267,218,24]}
+{"kind":"textbox","id":"sh/o3mtwf29","slide":2,"text":"Exposes tools and context","textPreview":"Exposes tools and context","textChars":25,"textLines":1,"bbox":[736,297,214,72]}
+{"kind":"shape","id":"sh/p4va5k3u","slide":2,"bbox":[1038,255,170,120]}
+{"kind":"textbox","id":"sh/21kru5k3","slide":2,"text":"DATA","textPreview":"DATA","textChars":4,"textLines":1,"bbox":[1054,267,138,24]}
+{"kind":"textbox","id":"sh/n2ts3alo","slide":2,"text":"APIs, files, databases","textPreview":"APIs, files, databases","textChars":22,"textLines":1,"bbox":[1056,297,134,72]}
+{"kind":"shape","id":"sh/47i9kv25","slide":2,"bbox":[320,315,74,0]}
+{"kind":"shape","id":"sh/58ratg3a","slide":2,"bbox":[644,315,74,0]}
+{"kind":"shape","id":"sh/lojqxcve","slide":2,"bbox":[968,315,70,0]}
+{"kind":"shape","id":"sh/k3apo7et","slide":2,"bbox":[330,464,170,76]}
+{"kind":"textbox","id":"sh/j218v2d8","slide":2,"text":"TOOLS","textPreview":"TOOLS","textChars":5,"textLines":1,"bbox":[346,476,138,24]}
+{"kind":"textbox","id":"sh/y1s7mhwn","slide":2,"text":"Actions","textPreview":"Actions","textChars":7,"textLines":1,"bbox":[348,506,134,28]}
+{"kind":"shape","id":"sh/ts3q1wva","slide":2,"bbox":[555,464,210,76]}
+{"kind":"textbox","id":"sh/8rupsrup","slide":2,"text":"RESOURCES","textPreview":"RESOURCES","textChars":9,"textLines":1,"bbox":[571,476,178,24]}
+{"kind":"textbox","id":"sh/7q18zmd4","slide":2,"text":"Readable context","textPreview":"Readable context","textChars":16,"textLines":1,"bbox":[573,506,174,28]}
+{"kind":"shape","id":"sh/6ps7qhcz","slide":2,"bbox":[820,464,210,76]}
+{"kind":"textbox","id":"sh/hw3q5wvm","slide":2,"text":"PROMPTS","textPreview":"PROMPTS","textChars":7,"textLines":1,"bbox":[836,476,178,24]}
+{"kind":"textbox","id":"sh/gvupwru1","slide":2,"text":"Reusable workflows","textPreview":"Reusable workflows","textChars":18,"textLines":1,"bbox":[838,506,174,28]}
+{"kind":"textbox","id":"sh/e1onqtcj","slide":2,"text":"Trading Journal MCP  02","textPreview":"Trading Journal MCP  02","textChars":23,"textLines":1,"bbox":[58,672,260,22]}
+{"kind":"notes","id":"nt/kr24yj","slide":2,"text":"Sources: MCP architecture and concepts documentation: https://modelcontextprotocol.io/docs/concepts/architecture and specification sections for tools, resources and prompts at https://modelcontextprotocol.io/specification."}
+{"kind":"slide","id":"sl/vlav0k","slide":3,"title":"Client to server lifecycle","textShapes":13}
+{"kind":"shape","id":"sh/qlcb6l03","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/donu10ju","slide":3,"bbox":[0,0,260,260]}
+{"kind":"shape","id":"sh/snet8vi9","slide":3,"bbox":[1020,0,260,260]}
+{"kind":"textbox","id":"sh/3ilcv61s","slide":3,"text":"Client to server lifecycle","textPreview":"Client to server lifecycle","textChars":26,"textLines":1,"bbox":[58,42,760,58]}
+{"kind":"textbox","id":"sh/ixcb2l07","slide":3,"text":"Discovery happens before action","textPreview":"Discovery happens before action","textChars":31,"textLines":1,"bbox":[60,98,820,38]}
+{"kind":"shape","id":"sh/5k3uxgji","slide":3,"bbox":[95,265,180,96]}
+{"kind":"textbox","id":"sh/4jut4bid","slide":3,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[111,277,148,24]}
+{"kind":"textbox","id":"sh/nepc7a1w","slide":3,"text":"Connect","textPreview":"Connect","textChars":7,"textLines":1,"bbox":[113,307,144,48]}
+{"kind":"shape","id":"sh/2twve50b","slide":3,"bbox":[345,265,190,96]}
+{"kind":"textbox","id":"sh/cfels7mh","slide":3,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[361,277,158,24]}
+{"kind":"textbox","id":"sh/dgn21c32","slide":3,"text":"Discover tools","textPreview":"Discover tools","textChars":14,"textLines":1,"bbox":[363,307,154,48]}
+{"kind":"shape","id":"sh/qtw3qh4r","slide":3,"bbox":[605,265,190,96]}
+{"kind":"textbox","id":"sh/bu5kz2lc","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[621,277,158,24]}
+{"kind":"textbox","id":"sh/orelo7ml","slide":3,"text":"Call a tool","textPreview":"Call a tool","textChars":11,"textLines":1,"bbox":[623,307,154,48]}
+{"kind":"shape","id":"sh/psn2xc36","slide":3,"bbox":[865,265,190,96]}
+{"kind":"textbox","id":"sh/2pw3mx4f","slide":3,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[881,277,158,24]}
+{"kind":"textbox","id":"sh/3q5kv2l0","slide":3,"text":"Return result","textPreview":"Return result","textChars":13,"textLines":1,"bbox":[883,307,154,48]}
+{"kind":"shape","id":"sh/gnu1knm9","slide":3,"bbox":[275,313,70,0]}
+{"kind":"shape","id":"sh/1o32ts3u","slide":3,"bbox":[535,313,70,0]}
+{"kind":"shape","id":"sh/hkvixofy","slide":3,"bbox":[795,313,70,0]}
+{"kind":"textbox","id":"sh/gjm1ojed","slide":3,"text":"The client does not need to know how the server gets the data","textPreview":"The client does not need to know how the server gets the data","textChars":61,"textLines":1,"bbox":[230,450,820,38]}
+{"kind":"textbox","id":"sh/vid0vexs","slide":3,"text":"It only needs the server contract: available tools, expected inputs, and structured outputs","textPreview":"It only needs the server contract: available tools, expected inputs, and structured outputs","textChars":91,"textLines":1,"bbox":[250,500,780,52]}
+{"kind":"textbox","id":"sh/uh4zm9w7","slide":3,"text":"Trading Journal MCP  03","textPreview":"Trading Journal MCP  03","textChars":23,"textLines":1,"bbox":[58,672,260,22]}
+{"kind":"notes","id":"nt/vlav0k","slide":3,"text":"Sources: MCP architecture documentation on client-server interaction and capability discovery, https://modelcontextprotocol.io/docs/concepts/architecture."}
+{"kind":"slide","id":"sl/xuwd3d","slide":4,"title":"Why MCP matters","textShapes":14}
+{"kind":"shape","id":"sh/vipcraxo","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/wjydkfe9","slide":4,"bbox":[0,0,260,260]}
+{"kind":"shape","id":"sh/xk7etkvu","slide":4,"bbox":[1020,0,260,260]}
+{"kind":"textbox","id":"sh/mdwve5w7","slide":4,"text":"Why MCP matters","textPreview":"Why MCP matters","textChars":15,"textLines":1,"bbox":[58,42,760,58]}
+{"kind":"textbox","id":"sh/ne5cnaxs","slide":4,"text":"One capability layer can support many clients","textPreview":"One capability layer can support many clients","textChars":45,"textLines":1,"bbox":[60,98,820,38]}
+{"kind":"shape","id":"sh/8fedgved","slide":4,"bbox":[480,270,320,142]}
+{"kind":"textbox","id":"sh/9g7up0fy","slide":4,"text":"MCP SERVER","textPreview":"MCP SERVER","textChars":10,"textLines":1,"bbox":[496,282,288,24]}
+{"kind":"textbox","id":"sh/690vqpwb","slide":4,"text":"Stable capability contract","textPreview":"Stable capability contract","textChars":26,"textLines":1,"bbox":[498,312,284,94]}
+{"kind":"shape","id":"sh/7a9wzudw","slide":4,"bbox":[95,164,200,82]}
+{"kind":"textbox","id":"sh/jmp4vudw","slide":4,"text":"CLIENT","textPreview":"CLIENT","textChars":6,"textLines":1,"bbox":[111,176,168,24]}
+{"kind":"textbox","id":"sh/ilg32pwb","slide":4,"text":"Web app","textPreview":"Web app","textChars":7,"textLines":1,"bbox":[113,206,164,34]}
+{"kind":"shape","id":"sh/5o7mx4vm","slide":4,"bbox":[95,450,200,82]}
+{"kind":"textbox","id":"sh/knyl4ze1","slide":4,"text":"CLIENT","textPreview":"CLIENT","textChars":6,"textLines":1,"bbox":[111,462,168,24]}
+{"kind":"textbox","id":"sh/7qp4zuds","slide":4,"text":"CLI demo","textPreview":"CLI demo","textChars":8,"textLines":1,"bbox":[113,492,164,34]}
+{"kind":"shape","id":"sh/6pgn69w7","slide":4,"bbox":[990,164,200,82]}
+{"kind":"textbox","id":"sh/ts7m14vy","slide":4,"text":"CLIENT","textPreview":"CLIENT","textChars":6,"textLines":1,"bbox":[1006,176,168,24]}
+{"kind":"textbox","id":"sh/sry58zed","slide":4,"text":"Future AI agent","textPreview":"Future AI agent","textChars":15,"textLines":1,"bbox":[1008,206,164,34]}
+{"kind":"shape","id":"sh/fe943edo","slide":4,"bbox":[990,450,200,82]}
+{"kind":"textbox","id":"sh/ud0na9wj","slide":4,"text":"CLIENT","textPreview":"CLIENT","textChars":6,"textLines":1,"bbox":[1006,462,168,24]}
+{"kind":"textbox","id":"sh/q9k72dgr","slide":4,"text":"Other apps","textPreview":"Other apps","textChars":10,"textLines":1,"bbox":[1008,492,164,34]}
+{"kind":"shape","id":"sh/ratobixw","slide":4,"bbox":[295,205,185,136]}
+{"kind":"shape","id":"sh/cb2p4nyh","slide":4,"bbox":[295,341,185,150]}
+{"kind":"shape","id":"sh/dcvqdsf2","slide":4,"bbox":[800,205,190,136]}
+{"kind":"shape","id":"sh/2lk7ydgf","slide":4,"bbox":[800,341,190,150]}
+{"kind":"textbox","id":"sh/3mto7yx0","slide":4,"text":"MCP keeps client experience flexible while the server owns access, policy, and integration details","textPreview":"MCP keeps client experience flexible while the server owns access, policy, and integration details","textChars":98,"textLines":1,"bbox":[240,582,800,48]}
+{"kind":"textbox","id":"sh/472p03yl","slide":4,"text":"Trading Journal MCP  04","textPreview":"Trading Journal MCP  04","textChars":23,"textLines":1,"bbox":[58,672,260,22]}
+{"kind":"notes","id":"nt/xuwd3d","slide":4,"text":"Sources: MCP architecture documentation: https://modelcontextprotocol.io/docs/concepts/architecture. MCP 2026 roadmap for ecosystem direction: https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/."}
+{"kind":"slide","id":"sl/bem686","slide":5,"title":"Trading Journal MCP topology","textShapes":15}
+{"kind":"shape","id":"sh/qdsvatwj","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/dgju5ofu","slide":5,"bbox":[0,0,260,260]}
+{"kind":"shape","id":"sh/cfadcje9","slide":5,"bbox":[1020,0,260,260]}
+{"kind":"textbox","id":"sh/3ahczexs","slide":5,"text":"Trading Journal MCP topology","textPreview":"Trading Journal MCP topology","textChars":28,"textLines":1,"bbox":[58,42,760,58]}
+{"kind":"textbox","id":"sh/i98v69g7","slide":5,"text":"The app exposes finance workflows through domain MCP servers","textPreview":"The app exposes finance workflows through domain MCP servers","textChars":60,"textLines":1,"bbox":[60,98,820,38]}
+{"kind":"shape","id":"sh/5czu1ofy","slide":5,"bbox":[70,252,210,170]}
+{"kind":"textbox","id":"sh/4bqd8jyd","slide":5,"text":"CLIENTS","textPreview":"CLIENTS","textChars":7,"textLines":1,"bbox":[86,264,178,24]}
+{"kind":"textbox","id":"sh/v6hcvuxg","slide":5,"text":"Web UI\nMCP Console\nCLI Client","textPreview":"Web UI | MCP Console | CLI Client","textChars":29,"textLines":3,"bbox":[88,294,174,122]}
+{"kind":"shape","id":"sh/u58b2pgb","slide":5,"bbox":[350,258,230,158]}
+{"kind":"textbox","id":"sh/4nq18rqt","slide":5,"text":"APP HOST","textPreview":"APP HOST","textChars":8,"textLines":1,"bbox":[366,270,198,24]}
+{"kind":"textbox","id":"sh/poz21w7e","slide":5,"text":"FastAPI app\nInternal MCP client","textPreview":"FastAPI app | Internal MCP client","textChars":31,"textLines":2,"bbox":[368,300,194,110]}
+{"kind":"shape","id":"sh/2l8j6h8n","slide":5,"bbox":[655,205,230,264]}
+{"kind":"textbox","id":"sh/3mhkzm98","slide":5,"text":"MCP SERVERS","textPreview":"MCP SERVERS","textChars":11,"textLines":1,"bbox":[671,217,198,24]}
+{"kind":"textbox","id":"sh/gj6147qh","slide":5,"text":"Portfolio\nMarket Data\nNews\nBroker\nTrading","textPreview":"Portfolio | Market Data | News | Broker | Trading","textChars":41,"textLines":5,"bbox":[673,247,194,216]}
+{"kind":"shape","id":"sh/hkz2xcr2","slide":5,"bbox":[970,160,230,104]}
+{"kind":"textbox","id":"sh/uhoj2h8r","slide":5,"text":"SERVICES","textPreview":"SERVICES","textChars":8,"textLines":1,"bbox":[986,172,198,24]}
+{"kind":"textbox","id":"sh/fixkv29w","slide":5,"text":"Portfolio, market data,\nnews, broker, orders","textPreview":"Portfolio, market data, | news, broker, orders","textChars":44,"textLines":2,"bbox":[988,202,194,56]}
+{"kind":"shape","id":"sh/0falgbq1","slide":5,"bbox":[970,308,230,104]}
+{"kind":"textbox","id":"sh/lgj29g76","slide":5,"text":"STATE","textPreview":"STATE","textChars":5,"textLines":1,"bbox":[986,320,198,24]}
+{"kind":"textbox","id":"sh/9wf2tgzq","slide":5,"text":"SQLite database\nAudit logs","textPreview":"SQLite database | Audit logs","textChars":26,"textLines":2,"bbox":[988,350,194,56]}
+{"kind":"shape","id":"sh/8v61kbi5","slide":5,"bbox":[970,456,230,104]}
+{"kind":"textbox","id":"sh/7uxkr6hk","slide":5,"text":"PROVIDERS","textPreview":"PROVIDERS","textChars":9,"textLines":1,"bbox":[986,468,198,24]}
+{"kind":"textbox","id":"sh/m9oji10z","slide":5,"text":"Alpaca market data\nYahoo news","textPreview":"Alpaca market data | Yahoo news","textChars":29,"textLines":2,"bbox":[988,498,194,56]}
+{"kind":"shape","id":"sh/l8f2pwze","slide":5,"bbox":[280,337,70,0]}
+{"kind":"shape","id":"sh/0761grit","slide":5,"bbox":[580,337,75,0]}
+{"kind":"shape","id":"sh/z6xknmh8","slide":5,"bbox":[885,212,85,125]}
+{"kind":"shape","id":"sh/y54jeh03","slide":5,"bbox":[885,337,85,23]}
+{"kind":"shape","id":"sh/d4vilczi","slide":5,"bbox":[885,337,85,171]}
+{"kind":"textbox","id":"sh/c3m1crix","slide":5,"text":"Trading Journal MCP  05","textPreview":"Trading Journal MCP  05","textChars":23,"textLines":1,"bbox":[58,672,260,22]}
+{"kind":"notes","id":"nt/bem686","slide":5,"text":"Sources: Trading Journal architecture documentation docs/architecture_plan.md and implementation plan docs/implementation_plan.md. External integrations are described in the project as Alpaca market data and Yahoo Finance demo news."}
+{"kind":"slide","id":"sl/i78tam","slide":6,"title":"Two client paths","textShapes":16}
+{"kind":"shape","id":"sh/832xwri5","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/nitwnm10","slide":6,"bbox":[0,0,260,260]}
+{"kind":"shape","id":"sh/mhkfuhkf","slide":6,"bbox":[1020,0,260,260]}
+{"kind":"textbox","id":"sh/lgbelcju","slide":6,"text":"Two client paths","textPreview":"Two client paths","textChars":16,"textLines":1,"bbox":[58,42,760,58]}
+{"kind":"textbox","id":"sh/0f2xs729","slide":6,"text":"The same MCP servers support the browser and the terminal","textPreview":"The same MCP servers support the browser and the terminal","textChars":57,"textLines":1,"bbox":[60,98,820,38]}
+{"kind":"shape","id":"sh/zetwj21o","slide":6,"bbox":[85,188,230,86]}
+{"kind":"textbox","id":"sh/ydkvqxk3","slide":6,"text":"WEB","textPreview":"WEB","textChars":3,"textLines":1,"bbox":[101,200,198,24]}
+{"kind":"textbox","id":"sh/dcrehcji","slide":6,"text":"User clicks Market Data","textPreview":"User clicks Market Data","textChars":23,"textLines":1,"bbox":[103,230,194,38]}
+{"kind":"shape","id":"sh/cbido72d","slide":6,"bbox":[390,188,230,86]}
+{"kind":"textbox","id":"sh/ehcvy5gf","slide":6,"text":"INTERNAL","textPreview":"INTERNAL","textChars":8,"textLines":1,"bbox":[406,200,198,24]}
+{"kind":"textbox","id":"sh/zilcrax0","slide":6,"text":"FastAPI MCP client","textPreview":"FastAPI MCP client","textChars":18,"textLines":1,"bbox":[408,230,194,38]}
+{"kind":"shape","id":"sh/03ud0fyl","slide":6,"bbox":[85,434,230,86]}
+{"kind":"textbox","id":"sh/143utkf6","slide":6,"text":"CLI","textPreview":"CLI","textChars":3,"textLines":1,"bbox":[101,446,198,24]}
+{"kind":"textbox","id":"sh/qdsbu5gj","slide":6,"text":"mcp_demo_client.py","textPreview":"mcp_demo_client.py","textChars":18,"textLines":1,"bbox":[103,476,194,38]}
+{"kind":"shape","id":"sh/re1cnah4","slide":6,"bbox":[390,434,230,86]}
+{"kind":"textbox","id":"sh/cfadwfyp","slide":6,"text":"EXTERNAL","textPreview":"EXTERNAL","textChars":8,"textLines":1,"bbox":[406,446,198,24]}
+{"kind":"textbox","id":"sh/dgjupkzu","slide":6,"text":"Streamable HTTP client","textPreview":"Streamable HTTP client","textChars":22,"textLines":1,"bbox":[408,476,194,38]}
+{"kind":"shape","id":"sh/29sbqlg7","slide":6,"bbox":[735,310,230,110]}
+{"kind":"textbox","id":"sh/3a1cjqhs","slide":6,"text":"SERVER","textPreview":"SERVER","textChars":6,"textLines":1,"bbox":[751,322,198,24]}
+{"kind":"textbox","id":"sh/7exsrmxk","slide":6,"text":"Market Data MCP","textPreview":"Market Data MCP","textChars":15,"textLines":1,"bbox":[753,352,194,62]}
+{"kind":"shape","id":"sh/6dory1wz","slide":6,"bbox":[1030,310,170,110]}
+{"kind":"textbox","id":"sh/tgfatwfq","slide":6,"text":"PROVIDER","textPreview":"PROVIDER","textChars":8,"textLines":1,"bbox":[1046,322,138,24]}
+{"kind":"textbox","id":"sh/8f690re5","slide":6,"text":"Alpaca snapshots","textPreview":"Alpaca snapshots","textChars":16,"textLines":1,"bbox":[1048,352,134,62]}
+{"kind":"shape","id":"sh/vihsv6xw","slide":6,"bbox":[315,231,75,0]}
+{"kind":"shape","id":"sh/uhorm1wb","slide":6,"bbox":[315,477,75,0]}
+{"kind":"shape","id":"sh/hkzaxgvm","slide":6,"bbox":[620,231,115,134]}
+{"kind":"shape","id":"sh/gjq9obeh","slide":6,"bbox":[620,365,115,112]}
+{"kind":"shape","id":"sh/bmd8j2xc","slide":6,"bbox":[965,365,65,0]}
+{"kind":"textbox","id":"sh/al4rqxwr","slide":6,"text":"The UI and CLI use different experiences, but the capability contract stays the same","textPreview":"The UI and CLI use different experiences, but the capability contract stays the same","textChars":84,"textLines":1,"bbox":[270,594,740,42]}
+{"kind":"textbox","id":"sh/0r2pk3up","slide":6,"text":"Trading Journal MCP  06","textPreview":"Trading Journal MCP  06","textChars":23,"textLines":1,"bbox":[58,672,260,22]}
+{"kind":"notes","id":"nt/i78tam","slide":6,"text":"Sources: app/templates/workflow.html, scripts/mcp_demo_client.py, app/services/mcp_host.py, and app/services/market_data.py in the Trading Journal project."}
+{"kind":"slide","id":"sl/5sqn60","slide":7,"title":"Trading Journal capability map","textShapes":16}
+{"kind":"shape","id":"sh/tc7e14re","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/69gvq983","slide":7,"bbox":[0,0,260,260]}
+{"kind":"shape","id":"sh/7apwze9o","slide":7,"bbox":[1020,0,260,260]}
+{"kind":"textbox","id":"sh/gfixwjq5","slide":7,"text":"Trading Journal capability map","textPreview":"Trading Journal capability map","textChars":30,"textLines":1,"bbox":[58,42,760,58]}
+{"kind":"textbox","id":"sh/hgre5orq","slide":7,"text":"Each financial domain has a focused server boundary","textPreview":"Each financial domain has a focused server boundary","textChars":51,"textLines":1,"bbox":[60,98,820,38]}
+{"kind":"shape","id":"sh/udgfu98z","slide":7,"bbox":[78,178,340,96]}
+{"kind":"textbox","id":"sh/vepw3e9k","slide":7,"text":"Portfolio","textPreview":"Portfolio","textChars":9,"textLines":1,"bbox":[94,190,308,24]}
+{"kind":"textbox","id":"sh/43ix0jq1","slide":7,"text":"Accounts, trades, positions","textPreview":"Accounts, trades, positions","textChars":27,"textLines":1,"bbox":[96,220,304,48]}
+{"kind":"shape","id":"sh/p4re9orm","slide":7,"bbox":[478,178,340,96]}
+{"kind":"textbox","id":"sh/dk3i98fy","slide":7,"text":"Market Data","textPreview":"Market Data","textChars":11,"textLines":1,"bbox":[494,190,308,24]}
+{"kind":"textbox","id":"sh/sjuhg3yd","slide":7,"text":"Live prices through Alpaca","textPreview":"Live prices through Alpaca","textChars":26,"textLines":1,"bbox":[496,220,304,48]}
+{"kind":"shape","id":"sh/ril07yxs","slide":7,"bbox":[878,178,340,96]}
+{"kind":"textbox","id":"sh/qhczetg7","slide":7,"text":"News","textPreview":"News","textChars":4,"textLines":1,"bbox":[894,190,308,24]}
+{"kind":"textbox","id":"sh/1onidsfu","slide":7,"text":"Stock news through Yahoo","textPreview":"Stock news through Yahoo","textChars":24,"textLines":1,"bbox":[896,220,304,48]}
+{"kind":"shape","id":"sh/0nuhkne9","slide":7,"bbox":[78,348,340,96]}
+{"kind":"textbox","id":"sh/fml0bix4","slide":7,"text":"Broker","textPreview":"Broker","textChars":6,"textLines":1,"bbox":[94,360,308,24]}
+{"kind":"textbox","id":"sh/elczidgj","slide":7,"text":"IBKR sync placeholder","textPreview":"IBKR sync placeholder","textChars":21,"textLines":1,"bbox":[96,390,304,48]}
+{"kind":"shape","id":"sh/hsjy1ofq","slide":7,"bbox":[478,348,340,96]}
+{"kind":"textbox","id":"sh/grah8jy5","slide":7,"text":"Trading","textPreview":"Trading","textChars":7,"textLines":1,"bbox":[494,360,308,24]}
+{"kind":"textbox","id":"sh/8vehoj61","slide":7,"text":"Order preview only","textPreview":"Order preview only","textChars":18,"textLines":1,"bbox":[496,390,304,48]}
+{"kind":"shape","id":"sh/9wnixonm","slide":7,"bbox":[878,348,340,96]}
+{"kind":"textbox","id":"sh/m9czmtov","slide":7,"text":"Audit","textPreview":"Audit","textChars":5,"textLines":1,"bbox":[894,360,308,24]}
+{"kind":"textbox","id":"sh/7a50vy5g","slide":7,"text":"Trace user and MCP activity","textPreview":"Trace user and MCP activity","textChars":27,"textLines":1,"bbox":[896,390,304,48]}
+{"kind":"textbox","id":"sh/wzehs36x","slide":7,"text":"Safety boundary: broker and trading workflows stay read-only or preview-only in the prototype","textPreview":"Safety boundary: broker and trading workflows stay read-only or preview-only in the prototype","textChars":93,"textLines":1,"bbox":[210,566,860,44]}
+{"kind":"textbox","id":"sh/h0ni18ni","slide":7,"text":"Trading Journal MCP  07","textPreview":"Trading Journal MCP  07","textChars":23,"textLines":1,"bbox":[58,672,260,22]}
+{"kind":"notes","id":"nt/5sqn60","slide":7,"text":"Sources: docs/architecture_plan.md section Active MCP Endpoints and Current Safety Boundary. The project explicitly keeps live trading disabled and Broker MCP as a placeholder."}
+{"kind":"slide","id":"sl/o1mjoi","slide":8,"title":"Reference material","textShapes":12}
+{"kind":"shape","id":"sh/z2l0jelk","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/03uhsjm5","slide":8,"bbox":[0,0,260,260]}
+{"kind":"shape","id":"sh/143ilo3a","slide":8,"bbox":[1020,0,260,260]}
+{"kind":"textbox","id":"sh/m5czut4v","slide":8,"text":"Reference material","textPreview":"Reference material","textChars":18,"textLines":1,"bbox":[58,42,760,58]}
+{"kind":"textbox","id":"sh/n6l0nylg","slide":8,"text":"Sources behind the MCP overview and application workflow","textPreview":"Sources behind the MCP overview and application workflow","textChars":56,"textLines":1,"bbox":[60,98,820,38]}
+{"kind":"shape","id":"sh/o7ehwjm1","slide":8,"bbox":[115,190,430,100]}
+{"kind":"textbox","id":"sh/98nipo3m","slide":8,"text":"MCP architecture","textPreview":"MCP architecture","textChars":16,"textLines":1,"bbox":[131,202,398,24]}
+{"kind":"textbox","id":"sh/a9wzyt47","slide":8,"text":"Hosts, clients, servers and capability discovery","textPreview":"Hosts, clients, servers and capability discovery","textChars":48,"textLines":1,"bbox":[133,232,394,52]}
+{"kind":"shape","id":"sh/ba50ryls","slide":8,"bbox":[655,190,430,100]}
+{"kind":"textbox","id":"sh/zi5cj6tk","slide":8,"text":"MCP specification","textPreview":"MCP specification","textChars":17,"textLines":1,"bbox":[671,202,398,24]}
+{"kind":"textbox","id":"sh/ehwbq1sz","slide":8,"text":"Tools, resources, prompts and transport concepts","textPreview":"Tools, resources, prompts and transport concepts","textChars":48,"textLines":1,"bbox":[673,232,394,52]}
+{"kind":"shape","id":"sh/1k7ulgbq","slide":8,"bbox":[115,360,430,100]}
+{"kind":"textbox","id":"sh/0jytcba5","slide":8,"text":"MCP roadmap","textPreview":"MCP roadmap","textChars":11,"textLines":1,"bbox":[131,372,398,24]}
+{"kind":"textbox","id":"sh/ru5cf6to","slide":8,"text":"Ecosystem direction and future work","textPreview":"Ecosystem direction and future work","textChars":35,"textLines":1,"bbox":[133,402,394,52]}
+{"kind":"shape","id":"sh/qtwbm1s3","slide":8,"bbox":[655,360,430,100]}
+{"kind":"textbox","id":"sh/dgnuhwbe","slide":8,"text":"Project docs","textPreview":"Project docs","textChars":12,"textLines":1,"bbox":[671,372,398,24]}
+{"kind":"textbox","id":"sh/cvetobat","slide":8,"text":"Trading Journal architecture and implementation plan","textPreview":"Trading Journal architecture and implementation plan","textChars":52,"textLines":1,"bbox":[673,402,394,52]}
+{"kind":"textbox","id":"sh/bq9crqts","slide":8,"text":"Suggested talk track: define MCP first, then show how the app turns portfolio, market data and news into MCP capabilities","textPreview":"Suggested talk track: define MCP first, then show how the app turns portfolio, market data and news into MCP capabilities","textChars":121,"textLines":1,"bbox":[140,570,1000,56]}
+{"kind":"textbox","id":"sh/apgvils7","slide":8,"text":"Trading Journal MCP  08","textPreview":"Trading Journal MCP  08","textChars":23,"textLines":1,"bbox":[58,672,260,22]}
+{"kind":"notes","id":"nt/o1mjoi","slide":8,"text":"References: MCP architecture documentation https://modelcontextprotocol.io/docs/concepts/architecture. MCP specification https://modelcontextprotocol.io/specification. MCP roadmap https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/. Trading Journal local files docs/architecture_plan.md, docs/implementation_plan.md and app/templates/workflow.html."}

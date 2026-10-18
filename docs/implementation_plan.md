@@ -34,6 +34,13 @@ This sequence matters because live trading should not be added until the app can
 | 15. Deployment readiness | Partially complete | Deployment plan exists; local tunnel professor-demo runbook added; public cloud deployment pending |
 | 16. Multi-user profiles and user-owned MCP connections | Future idea | Allow each user to have separate portfolio data, credentials, and external MCP/provider connections |
 | 17. Production-grade news provider | Future idea | Replace unofficial demo news source with an official API-backed provider before production use |
+| 18. Application Workflow Visualization Screen | Complete | Configuration > Workflow Map includes visual architecture, expandable request traces, registry descriptions, direct-service versus MCP paths, audit boundaries, and scaffold status |
+| 19. ACM-Style MCP Use Case White Paper | Complete (project manuscript) | docs/mcp_use_case_white_paper.md; downloadable from Documentation; includes abstract, architecture, evaluation procedure, limitations, references, authorship and AI disclosure. Author review and venue-specific typesetting remain publication tasks |
+
+### Items 18 and 19 Completion Scope (October 17, 2026)
+
+- Item 18: `/workflow` documents browser, internal host, CLI, five MCP servers, services, providers, database, and audit flow. Expandable traces distinguish direct portfolio requests from in-process MCP requests and explain failure and preview boundaries. This is an architectural view, not live monitoring.
+- Item 19: `docs/mcp_use_case_white_paper.md` is the complete ACM-style manuscript, available at `/documentation/mcp-white-paper`. It includes reproducible evaluation instructions without invented experimental results. Publication submission, final author approval, and ACM template typesetting are outside this deliverable.
 
 ## 2. Target Architecture
 
